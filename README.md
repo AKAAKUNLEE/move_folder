@@ -1,54 +1,54 @@
 
-# 文件夹移动图形界面应用程序
+# Move Folder GUI Application
 
-## 简介
+## Introduction
 
-这是一个基于Python开发的简洁实用的图形界面（GUI）应用程序，旨在帮助您轻松地在计算机上移动文件夹。无论您是寻求便捷工具的新手用户，还是需要优化文件管理任务的专业人士，该应用程序都能满足您的需求。
+This is a simple yet practical Python - based GUI application designed to facilitate the movement of folders on your computer. Whether you are a novice user looking for an easy - to - use tool or a professional needing to streamline your file management tasks, this application can come in handy.
 
-## 功能特点
+## Features
 
-1. **友好的图形界面**：应用程序采用Tkinter或PyQt5（具体取决于实现方式）构建，提供直观的图形化界面。用户通过专用按钮就能轻松选择源文件夹和目标文件夹，无需复杂的命令行操作。
-2. **文件夹移动功能**：应用程序的核心功能是能够将整个文件夹从一个位置移动到另一个位置。它利用Python的 `shutil`模块执行此操作，确保可靠性和高效性。
-3. **配置保存功能**：该应用程序允许用户将源文件夹和目标文件夹路径保存为自定义格式的配置文件（例如后缀为 `.mfc`）。这意味着，如果您经常在相同的两个位置之间移动文件夹，无需每次都重新选择路径。只需加载保存的配置，即可继续操作。
-4. **自定义文件关联（仅限Windows）**：对于Windows用户，应用程序可以与自定义文件后缀（如 `.mfm`）相关联。这意味着双击具有此自定义后缀的文件时，应用程序将启动，尽管在此情况下，主要是为了方便启动文件夹移动工具。
+1. **User - Friendly GUI**: Built using either Tkinter or PyQt5 (the choice depends on the implementation), the application offers an intuitive graphical interface. Users can easily select the source and destination folders through dedicated buttons, eliminating the need for complex command - line operations.
+2. **Folder Moving Functionality**: The core feature of this application is its ability to move entire folders from one location to another. It utilizes Python's `shutil` module to perform this operation, ensuring reliability and efficiency.
+3. **Configuration Saving**: The application allows users to save the source and destination folder paths as a custom - formatted configuration file (with a user - defined suffix like `.mfc`). This means that if you frequently move folders between the same two locations, you don't need to re - select the paths every time. Just load the saved configuration, and you're good to go.
+4. **Custom File Association (Windows - specific)**: For Windows users, the application can be associated with a custom file suffix (e.g.,.mfm). This means that by double - clicking on a file with this custom suffix, the application will launch, potentially with some context related to the clicked file (although in this case, mainly for convenience in launching the folder - moving tool).
 
-## 使用方法
+## How to Use
 
-1. **选择文件夹**：点击“选择源文件夹”和“选择目标文件夹”按钮，分别选择要移动的源文件夹和目标文件夹。
-2. **移动文件夹**：选择好文件夹后，点击“移动文件夹”按钮。应用程序将尝试将源文件夹移动到目标文件夹，并显示状态消息，指示操作是否成功或是否发生任何错误。
-3. **保存配置**：如果您希望保存当前的源文件夹和目标文件夹路径以供将来使用，点击“保存配置”按钮。系统将提示您选择保存配置文件的位置，文件后缀为自定义后缀（如 `.mfc`）。
-4. **加载配置**：要加载先前保存的配置，点击“加载配置”按钮并选择相应的配置文件。应用程序将使用保存的路径填充源文件夹和目标文件夹字段。
+1. **Select Folders**: Click the "Select Source Folder" and "Select Destination Folder" buttons to choose the folders you want to move from and to, respectively.
+2. **Move Folder**: After selecting the folders, click the "Move Folder" button. The application will then attempt to move the source folder to the destination folder. A status message will be displayed indicating whether the operation was successful or if any errors occurred.
+3. **Save Configuration**: If you want to save the current source and destination folder paths for future use, click the "Save Configuration" button. You will be prompted to choose a location to save the configuration file with the custom suffix (e.g.,.mfc).
+4. **Load Configuration**: To load a previously saved configuration, click the "Load Configuration" button and select the appropriate configuration file. The application will then populate the source and destination folder fields with the saved paths.
 
-## 安装步骤
+## Installation
 
-1. **前提条件**：
-   - 系统上安装有Python 3.x。
-   - 对于基于Tkinter的版本，无需安装其他库，因为Tkinter是Python标准库的一部分。对于基于PyQt5的版本，您需要使用 `pip install PyQt5`安装PyQt5。
-   - 如果您计划创建可执行文件并使用自定义文件关联（仅限Windows），则需要使用 `pip install pyinstaller`安装 `pyinstaller`。
-2. **克隆仓库**：
-   - 导航到本地计算机上您希望存储项目的目录。
-   - 运行 `git clone [仓库链接]`从GitHub仓库克隆项目。
-3. **运行应用程序**：
-   - 对于Python脚本：在命令行中导航到项目目录，然后运行 `python move_folder.py`（假设主Python文件名为 `move_folder.py`）。
-   - 对于可执行文件（仅限Windows，使用 `pyinstaller`创建后）：在 `pyinstaller`创建的 `dist`文件夹中找到生成的 `exe`文件，双击运行应用程序。
+1. **Prerequisites**:
+   - Python 3.x installed on your system.
+   - For the Tkinter - based version, no additional libraries need to be installed as Tkinter is part of the Python standard library. For the PyQt5 - based version, you need to install PyQt5 using `pip install PyQt5`.
+   - If you plan to create the executable and use the custom file association (Windows - only), you need to install `pyinstaller` using `pip install pyinstaller`.
+2. **Clone the Repository**:
+   - Navigate to the directory where you want to store the project on your local machine.
+   - Run `git clone [repository - url]` to clone the project from the GitHub repository.
+3. **Running the Application**:
+   - For the Python script: Navigate to the project directory in the command line and run `python move_folder.py` (assuming the main Python file is named `move_folder.py`).
+   - For the executable (Windows - only, after creating with `pyinstaller`): Locate the generated `exe` file in the `dist` folder created by `pyinstaller` and double - click on it to run the application.
 
-## 仓库结构
+## Repository Structure
 
-- **`move_folder.py`**：基于Tkinter的图形界面和文件夹移动功能的主Python脚本。
-- **`move_folder_pyqt.py`**：使用PyQt5实现图形界面的替代版本。
-- **`associate_mfm.reg`**：仅限Windows的注册表文件，用于将应用程序与自定义文件后缀（如 `.mfm`）相关联。
-- **`README.md`**：即本文件，提供项目概述、功能特点、使用方法和安装说明。
+- **`move_folder.py`**: The main Python script containing the code for the Tkinter - based GUI and folder - moving functionality.
+- **`move_folder_pyqt.py`**: An alternative implementation using PyQt5 for the GUI.
+- **`associate_mfm.reg`**: A Windows - specific registry file used to associate the application with the custom file suffix (e.g.,.mfm).
+- **`README.md`**: This file, providing an overview of the project, its features, usage, and installation instructions.
 
-## 未来改进方向
+## Future Improvements
 
-1. **跨平台文件关联**：目前，自定义文件关联仅在Windows上实现。未来可努力在macOS和Linux系统上支持类似功能。
-2. **增强错误处理**：虽然在文件夹移动操作中已有基本的错误处理，但可以添加更全面的错误处理，以更友好的方式处理诸如权限不足、磁盘空间已满等错误情况。
-3. **多语言支持**：添加多语言支持，使应用程序对全球用户更具易用性。
+1. **Cross - Platform File Association**: Currently, the custom file association is only implemented for Windows. In the future, efforts could be made to support similar functionality on macOS and Linux systems.
+2. **Enhanced Error Handling**: While basic error handling is in place for folder moving operations, more comprehensive error handling could be added to handle cases such as insufficient permissions, disk full errors, etc., in a more user - friendly way.
+3. **Multi - language Support**: Adding support for multiple languages to make the application more accessible to a global audience.
 
-## 贡献方式
+## Contributing
 
-欢迎为这个项目做出贡献！如果您发现任何错误、有新功能建议或希望改进现有代码，请随时在GitHub仓库中提出问题或提交拉取请求。
+Contributions to this project are welcome! If you find any bugs, have suggestions for new features, or want to improve the existing code, feel free to open an issue or submit a pull request on the GitHub repository.
 
-## 许可证
+## License
 
-本项目根据[许可证名称]许可证授权。详情请参阅 `LICENSE`文件。
+This project is licensed under the [License Name] license. See the `LICENSE` file for details.
