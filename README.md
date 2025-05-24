@@ -67,4 +67,4 @@ Contributions to this project are highly welcome! If you find any bugs, have ide
 
 ## 8. License
 
-This project is licensed under the [License Name]. For detailed information, please refer to the `LICENSE` file in the project.
+This project is licensed under the [MIT]. For detailed information, please refer to the `LICENSE` file in the project.
