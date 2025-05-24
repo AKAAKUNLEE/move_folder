@@ -26,13 +26,33 @@
 1. **前提条件**：
    - 确保系统已安装Python 3.x。
    - 对于Tkinter版本，无需额外安装库，因为Tkinter是Python标准库的一部分。
-   - 若使用PyQt5版本，需通过 `pip install PyQt5`安装PyQt5库。
-   - 如果要创建可执行文件（仅限Windows），需使用 `pip install pyinstaller`安装 `pyinstaller`库。
+   - 若使用PyQt5版本，需通过
+     ```
+     pip install PyQt5
+     ```
+
+     安装PyQt5库。
+   - 如果要创建可执行文件（仅限Windows），需使用
+     ```
+     pip install pyinstaller
+     ```
+
+     安装 `pyinstaller`库。
 2. **克隆仓库**：
    - 打开命令行工具，导航到本地希望存储项目的目录。
-   - 运行 `git clone [仓库链接]`从GitHub仓库克隆项目代码到本地。
+   - 运行
+     ```
+     git clone https://github.com/AKAAKUNLEE/move_folder.git
+     ```
+
+     从GitHub仓库克隆项目代码到本地。
 3. **运行应用程序**：
-   - **Python脚本方式**：在命令行中进入项目目录，运行 `python move_folder.py`（假设主Python文件名为 `move_folder.py`）。
+   - **Python脚本方式**：在命令行中进入项目目录，运行
+     ```
+     python move_folder.py
+     ```
+
+     （假设主Python文件名为 `move_folder.py`）。
    - **可执行文件方式（仅限Windows）**：使用 `pyinstaller`将Python脚本打包成可执行文件后，在 `pyinstaller`生成的 `dist`文件夹中找到生成的 `.exe`文件，双击运行应用程序。
 
 ## 五、仓库结构
@@ -54,4 +74,4 @@
 
 ## 八、许可证
 
-本项目基于[许可证名称]许可证发布。详细信息请查看项目中的 `LICENSE`文件。
+本项目基于[MIT]许可证发布。详细信息请查看项目中的 `LICENSE`文件。
