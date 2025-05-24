@@ -1,5 +1,6 @@
-
 # Move Folder GUI Application
+
+🌐 [简体中文](README_zh-CN.md) | [English](README.md)
 
 ## Introduction
 
@@ -51,4 +52,4 @@ Contributions to this project are welcome! If you find any bugs, have suggestion
 
 ## License
 
-This project is licensed under the [License Name] license. See the `LICENSE` file for details.
+This project is licensed under the [MIT] license. See the `LICENSE` file for details.
