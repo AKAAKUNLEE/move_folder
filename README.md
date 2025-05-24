@@ -1,55 +1,70 @@
-# Move Folder GUI Application
+# Folder Moving GUI Application
 
 🌐 [简体中文](README_zh-CN.md) | [English](README.md)
 
-## Introduction
+## 1. Project Overview
 
-This is a simple yet practical Python - based GUI application designed to facilitate the movement of folders on your computer. Whether you are a novice user looking for an easy - to - use tool or a professional needing to streamline your file management tasks, this application can come in handy.
+This is a GUI (Graphical User Interface) application developed in Python for moving folders. It provides users, whether novice or professional, with a convenient way to manage folder relocation tasks on their computers.
 
-## Features
+## 2. Features
 
-1. **User - Friendly GUI**: Built using either Tkinter or PyQt5 (the choice depends on the implementation), the application offers an intuitive graphical interface. Users can easily select the source and destination folders through dedicated buttons, eliminating the need for complex command - line operations.
-2. **Folder Moving Functionality**: The core feature of this application is its ability to move entire folders from one location to another. It utilizes Python's `shutil` module to perform this operation, ensuring reliability and efficiency.
-3. **Configuration Saving**: The application allows users to save the source and destination folder paths as a custom - formatted configuration file (with a user - defined suffix like `.mfc`). This means that if you frequently move folders between the same two locations, you don't need to re - select the paths every time. Just load the saved configuration, and you're good to go.
-4. **Custom File Association (Windows - specific)**: For Windows users, the application can be associated with a custom file suffix (e.g.,.mfm). This means that by double - clicking on a file with this custom suffix, the application will launch, potentially with some context related to the clicked file (although in this case, mainly for convenience in launching the folder - moving tool).
+1. **Intuitive Graphical Interface**: Built with either Tkinter or PyQt5, the application offers an easy-to-use interface. Users can effortlessly select the source and destination folders through dedicated buttons, eliminating the need for complex command-line operations.
+2. **Folder Moving Functionality**: Leveraging Python's `shutil` module, it can reliably and efficiently move folders from one location to another.
+3. **Configuration Saving and Loading**: Supports saving the paths of the source and destination folders as a configuration file with a custom suffix (e.g., `.mfc`). Users can load the configuration later, avoiding the need to re-select the paths every time.
+4. **Window Characteristics**: The window size is fixed at 500x400. When the application starts, the window is automatically centered and置顶, providing a better user experience.
+5. **Menu Bar Functionality**: Features a menu bar with "File" and "About" menus. The "File" menu contains options for "Save Configuration" and "Load Configuration" to facilitate configuration management, while the "About" menu displays information about the application.
 
-## How to Use
+## 3. Usage Instructions
 
-1. **Select Folders**: Click the "Select Source Folder" and "Select Destination Folder" buttons to choose the folders you want to move from and to, respectively.
-2. **Move Folder**: After selecting the folders, click the "Move Folder" button. The application will then attempt to move the source folder to the destination folder. A status message will be displayed indicating whether the operation was successful or if any errors occurred.
-3. **Save Configuration**: If you want to save the current source and destination folder paths for future use, click the "Save Configuration" button. You will be prompted to choose a location to save the configuration file with the custom suffix (e.g.,.mfc).
-4. **Load Configuration**: To load a previously saved configuration, click the "Load Configuration" button and select the appropriate configuration file. The application will then populate the source and destination folder fields with the saved paths.
+1. **Select Folders**: Click the "Select Source Folder" and "Select Destination Folder" buttons. In the pop-up file selection dialogs, choose the source folder to be moved and the destination folder respectively.
+2. **Move Folders**: After selecting the source and destination folders, click the "Move Folder" button. The application will execute the folder-moving operation and display the operation status, such as success or error messages, on the interface.
+3. **Save Configuration**: To save the currently selected folder paths, click the "Save Configuration" option in the "File" menu. In the pop-up save file dialog, select the save location and confirm. The configuration file will be saved with a `.mfc` suffix.
+4. **Load Configuration**: To load a previously saved configuration, click the "Load Configuration" option in the "File" menu. In the pop-up open file dialog, select the corresponding configuration file, and the application will automatically fill in the source and destination folder paths.
+5. **View About Information**: Click the "About This Program" option in the "About" menu to view a brief introduction to the application.
 
-## Installation
+## 4. Installation Guide
 
 1. **Prerequisites**:
-   - Python 3.x installed on your system.
-   - For the Tkinter - based version, no additional libraries need to be installed as Tkinter is part of the Python standard library. For the PyQt5 - based version, you need to install PyQt5 using `pip install PyQt5`.
-   - If you plan to create the executable and use the custom file association (Windows - only), you need to install `pyinstaller` using `pip install pyinstaller`.
+   - Ensure that Python 3.x is installed on the system.
+   - For the Tkinter version, no additional libraries need to be installed as Tkinter is part of the Python standard library.
+   - If using the PyQt5 version, install the PyQt5 library via:
+     ```bash
+     pip install PyQt5
+     ```
+   - If creating an executable file (Windows only), install the `pyinstaller` library using:
+     ```bash
+     pip install pyinstaller
+     ```
 2. **Clone the Repository**:
-   - Navigate to the directory where you want to store the project on your local machine.
-   - Run `git clone [repository - url]` to clone the project from the GitHub repository.
-3. **Running the Application**:
-   - For the Python script: Navigate to the project directory in the command line and run `python move_folder.py` (assuming the main Python file is named `move_folder.py`).
-   - For the executable (Windows - only, after creating with `pyinstaller`): Locate the generated `exe` file in the `dist` folder created by `pyinstaller` and double - click on it to run the application.
+   - Open the command-line tool and navigate to the local directory where you want to store the project.
+   - Run:
+     ```bash
+     git clone https://github.com/AKAAKUNLEE/move_folder.git
+     ```
+3. **Run the Application**:
+   - **Python Script Method**: Enter the project directory in the command line and run:
+     ```bash
+     python move_folder.py
+     ```
+   - **Executable File Method (Windows only)**: After using `pyinstaller` to package the Python script into an executable file, find the generated `.exe` file in the `dist` folder created by `pyinstaller` and double-click to run the application.
 
-## Repository Structure
+## 5. Repository Structure
 
-- **`move_folder.py`**: The main Python script containing the code for the Tkinter - based GUI and folder - moving functionality.
-- **`move_folder_pyqt.py`**: An alternative implementation using PyQt5 for the GUI.
-- **`associate_mfm.reg`**: A Windows - specific registry file used to associate the application with the custom file suffix (e.g.,.mfm).
-- **`README.md`**: This file, providing an overview of the project, its features, usage, and installation instructions.
+1. **`move_folder.py`**: The main Python script implementing the graphical interface and folder-moving functionality based on Tkinter.
+2. **`move_folder_pyqt.py`**: An alternative version of the script using PyQt5 to implement the graphical interface.
+3. **`associate_mfm.reg`**: A registry file for Windows systems to associate the application with a custom file suffix (e.g., `.mfm`) if needed.
+4. **`README.md`**: This file, providing detailed project documentation.
 
-## Future Improvements
+## 6. Future Plans
 
-1. **Cross - Platform File Association**: Currently, the custom file association is only implemented for Windows. In the future, efforts could be made to support similar functionality on macOS and Linux systems.
-2. **Enhanced Error Handling**: While basic error handling is in place for folder moving operations, more comprehensive error handling could be added to handle cases such as insufficient permissions, disk full errors, etc., in a more user - friendly way.
-3. **Multi - language Support**: Adding support for multiple languages to make the application more accessible to a global audience.
+1. **Cross-Platform File Association**: Currently, custom file association is only implemented on Windows. Plans are underway to support similar functionality on macOS and Linux systems in the future.
+2. **Enhanced Error Handling**: Further improve the error-handling mechanism to more gracefully handle various error conditions, such as insufficient permissions and low disk space.
+3. **Multilingual Support**: Add multilingual support to make the application accessible to a global user base.
 
-## Contributing
+## 7. Contribution Guidelines
 
-Contributions to this project are welcome! If you find any bugs, have suggestions for new features, or want to improve the existing code, feel free to open an issue or submit a pull request on the GitHub repository.
+Contributions to this project are highly welcome! If you find any bugs, have ideas for new features, or wish to improve the existing code, please feel free to raise issues or submit pull requests in the GitHub repository.
 
-## License
+## 8. License
 
-This project is licensed under the [MIT] license. See the `LICENSE` file for details.
+This project is licensed under the [License Name]. For detailed information, please refer to the `LICENSE` file in the project.
