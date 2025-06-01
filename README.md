@@ -1,6 +1,14 @@
 # Folder Moving GUI Application
 
-🌐 [简体中文](README_zh-CN.md) | [English](README.md)
+<div align="center">
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.6+-blue.svg" alt="Python"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
+<a href="https://docs.python.org/3/library/tkinter.html"><img src="https://img.shields.io/badge/GUI-Tkinter-orange.svg" alt="Tkinter"></a>
+<a href="https://www.pyinstaller.org/"><img src="https://img.shields.io/badge/Packaging-PyInstaller-brightgreen.svg" alt="PyInstaller"></a>
+<a href="https://github.com/AKAAKUNLEE/move_folder/releases"><img src="https://img.shields.io/github/v/release/AKAAKUNLEE/move_folder" alt="Releases"></a>
+</div>
+
+🌐 [English](README.md) | [简体中文](README_zh-CN.md)
 
 ## 1. Project Overview
 
