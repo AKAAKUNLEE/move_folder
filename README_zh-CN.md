@@ -1,6 +1,6 @@
-
-# 文件夹移动图形界面应用程序
-
+<div align="center">
+<p><h1>文件夹移动图形界面应用程序</h1></p>
+</div>
 <div align="center">
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.6+-blue.svg" alt="Python"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>

@@ -1,4 +1,6 @@
-# Folder Moving GUI Application
+<div align="center">
+<p><h1>Folder Moving GUI Application</h1></p>
+</div>
 
 <div align="center">
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.6+-blue.svg" alt="Python"></a>
